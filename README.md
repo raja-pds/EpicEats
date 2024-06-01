@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# Web Development Internship Journey
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Day 1-2: Introduction to Web Development Fundamentals
 
-## Available Scripts
+- Learned HTML for structuring web pages.
+- Explored CSS for styling and enhancing visual presentation.
+- Studied JavaScript for interactivity and dynamic behavior.
+- Created a basic web page integrating HTML, CSS, and JavaScript.
 
-In the project directory, you can run:
+## Day 3-4: Advanced HTML, CSS, and Introduction to React.js
 
-### `npm start`
+- Expanded HTML knowledge with semantic elements.
+- Explored advanced CSS layout techniques and animations.
+- Introduced to React.js for building modern web applications.
+- Set up React.js development environment and learned JSX syntax.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Day 5-6: React Components, State Management, and Styling
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Learned about React components and lifecycle methods.
+- Explored state management with hooks like useState and useEffect.
+- Explored different styling approaches for React components.
 
-### `npm test`
+## Day 7-8: Routing in React and React-Bootstrap for Responsive UI
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Explored client-side routing with React Router.
+- Integrated React-Bootstrap for responsive UI components.
+- Created header component and integrated Redux.
 
-### `npm run build`
+## Day 9-10: Menu and Cart Components in EpicEats Project
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Implemented menu component fetching data from API.
+- Designed and implemented cart component with Redux integration.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Day 11-12: Checkout Component and Testing/Debugging
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Developed checkout component with Redux and form validation.
+- Conducted thorough testing and debugging of the project.
 
-### `npm run eject`
+## Day 13-14: Optimization, Deployment, and Project Wrap-Up
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Optimized project performance and analyzed using developer tools.
+- Deployed the project using Vercel and configured CI/CD.
+- Completed final testing, documentation, and project wrap-up.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Day 15: Final Testing, Documentation, and Project Wrap-Up
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Conducted final quality assurance checks and updated documentation.
+- Reviewed and refactored code for readability and performance.
+- Celebrated the completion of the EpicEats project and internship journey.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Project Link
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[EpicEats Project](https://epic-eats-six.vercel.app/)

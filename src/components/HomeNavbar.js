@@ -37,3 +37,4 @@ function HomeNavbar({ cartCount }) {
 }
 
 export default HomeNavbar;
+ 
