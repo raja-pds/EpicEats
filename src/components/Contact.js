@@ -1,4 +1,4 @@
-
+import React from 'react';
 import { Row, Col, Container, Form, Button } from 'react-bootstrap';
 import '../styles/Contact.css';
 import writeImage from '../assets/write.svg';
@@ -12,12 +12,14 @@ const Contact = () => {
       <div className='contactback'>
         <Container fluid>
           <div className='center'>
+            {/* Contact Header Section */}
             <div className='contact-header p-lg-5 p-5 p-md-3'>
               <div className='bg-white contactcontent'>
                 <h5>HAVE A QUESTIONS?</h5>
                 <h1>Contact Us</h1>
                 <p>Quaerat debitis, vel, sapiente dicta sequi labore porro pariatur harum expedita.</p>
                 <Row>
+                  {/* Contact Card: Write Us */}
                   <Col lg={4} md={12} sm={12}>
                     <div className='call-card p-lg-5 p-md-3'>
                       <img src={writeImage} alt='Write' className='feature-icon' />
@@ -28,6 +30,7 @@ const Contact = () => {
                       </div>
                     </div>
                   </Col>
+                  {/* Contact Card: Call Us */}
                   <Col lg={4} md={12} sm={12}>
                     <div className='call-card p-lg-5 p-md-3'>
                       <img src={callImage} alt='Call' className='feature-icon' />
@@ -38,6 +41,7 @@ const Contact = () => {
                       </div>
                     </div>
                   </Col>
+                  {/* Contact Card: Visit Us */}
                   <Col lg={4} md={12} sm={12}>
                     <div className='call-card p-lg-5 p-md-3'>
                       <img src={visitImage} alt='Visit' className='feature-icon' />
@@ -49,23 +53,25 @@ const Contact = () => {
                   </Col>
                 </Row>
                 <hr className='separateline' />
+                {/* Contact Form Section */}
                 <div className='contactform'>
                   <h5>Contact</h5>
                   <h1>Write Us a Message</h1>
                   <p>Porro eveniet, autem ipsam vitae consequatur!</p>
                   <Form>
                     <Row>
-                      <Col  md={6}>
+                      {/* First Name Input */}
+                      <Col md={6}>
                         <Form.Group className='mb-3'>
                           <Form.Label>First Name</Form.Label>
                           <Form.Control
                             type='text'
                             placeholder='Enter your first name'
                             name='firstName'
-                          
                           />
                         </Form.Group>
                       </Col>
+                      {/* Last Name Input */}
                       <Col md={6}>
                         <Form.Group className='mb-3'>
                           <Form.Label>Last Name</Form.Label>
@@ -73,12 +79,12 @@ const Contact = () => {
                             type='text'
                             placeholder='Enter your last name'
                             name='lastName'
-                           
                           />
                         </Form.Group>
                       </Col>
                     </Row>
                     <Row>
+                      {/* Phone Number Input */}
                       <Col md={6}>
                         <Form.Group className='mb-3'>
                           <Form.Label>Phone</Form.Label>
@@ -86,10 +92,10 @@ const Contact = () => {
                             type='text'
                             placeholder='Enter your phone number'
                             name='phone'
-                          
                           />
                         </Form.Group>
                       </Col>
+                      {/* Email Input */}
                       <Col md={6}>
                         <Form.Group className='mb-3'>
                           <Form.Label>Email</Form.Label>
@@ -97,11 +103,11 @@ const Contact = () => {
                             type='email'
                             placeholder='Enter your email'
                             name='email'
-                           
                           />
                         </Form.Group>
                       </Col>
                     </Row>
+                    {/* Message Input */}
                     <Form.Group className='mb-3'>
                       <Form.Label>Message</Form.Label>
                       <Form.Control
@@ -109,9 +115,9 @@ const Contact = () => {
                         rows={5}
                         placeholder='Write your message'
                         name='message'
-
                       />
                     </Form.Group>
+                    {/* Submit Button */}
                     <div className='text-center'>
                       <Button variant='primary' type='submit'>
                         Send Message

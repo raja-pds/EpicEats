@@ -5,7 +5,8 @@ import { useNavigate } from 'react-router-dom';
 
 const Time = () => {
 
-  const navigate=useNavigate();
+  const navigate = useNavigate();
+
   return (
     <div className='time-content'>
       <Row>
@@ -15,7 +16,7 @@ const Time = () => {
               <h4>ABOUT US</h4>
               <h1>Working hours</h1>
               <p>Rolorem, beatae dolorum, praesentium itaque et quam quaerat.</p>
-              <button className='reserve-btn' onClick={() => navigate('/menu')}  >Reservation</button>
+              <button className='reserve-btn' onClick={() => navigate('/menu')} >Reservation</button>
               <span className='contact-us m-lg-4 m-md-4 d-inline-block '>Contact Us</span>
             </div>
           </div>
@@ -25,13 +26,13 @@ const Time = () => {
             <h5>SUNDAY TO TUESDAY</h5>
             <div>
               <h2>09:00</h2>
-              <h2>22:00</h2> 
+              <h2>22:00</h2>
             </div>
             <h5>FRIDAY TO SATURDAY</h5>
             <div>
               <h2>11:00</h2>
               <h2>21:00</h2>
-            </div>  
+            </div>
           </div>
         </Col>
       </Row>

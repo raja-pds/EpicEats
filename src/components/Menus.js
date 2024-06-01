@@ -21,9 +21,10 @@ import pineapple from '../assets/pineapple.jpg';
 import strabeery from '../assets/strabeery.jpg';
 
 const Menus = ({ handleAddToCart }) => {
-  const [displayMenu, setDisplayMenu] = useState('mainMenuItems');
+  const [displayMenu, setDisplayMenu] = useState('mainMenuItems'); // State to toggle between main menu and juice menu
 
 
+  // Define main menu items and juice items with their names, images, prices, and count
   const [mainMenuItems, setMainMenuItems] = useState([
     { name: 'Pizza', image: pizza, price: '$7.50', count: 0 },
     { name: 'Fish Fry', image: fishfry, price: '$8.00', count: 0 },
@@ -45,15 +46,18 @@ const Menus = ({ handleAddToCart }) => {
     { name: 'Strawberry', image: strabeery, price: '$17.50', count: 0 },
     { name: 'Pineapple', image: pineapple, price: '$22.00', count: 0 }
   ]);
+ 
+  const navigate = useNavigate();  // Hook to navigate to different routes
 
-  const navigate = useNavigate();
 
+   // Function to toggle between main menu and juice menu
   const toggleDisplayMenu = (menuType) => {
     setDisplayMenu(menuType);
   };
 
+  // Function to handle adding an item to cart and notify
   const handleAddToCartAndNotify = (menuType, index) => {
-    handleAddToCart();
+    handleAddToCart(); // Call the function passed from parent component to handle adding to cart
     if (menuType === 'mainMenuItems') {
       const newMainMenuItems = [...mainMenuItems];
       newMainMenuItems[index].count += 1;
@@ -65,11 +69,11 @@ const Menus = ({ handleAddToCart }) => {
     }
   };
 
-
+  // Function to handle the "Buy Now" button click
   const handleBuyNow = () => {
-    const selectedItems = [...mainMenuItems, ...juiceItems].filter(item => item.count > 0);
-    const totalPrice = selectedItems.reduce((total, item) => total + (parseFloat(item.price.slice(1)) * item.count), 0);
-    navigate('/checkout', { state: { items: selectedItems, totalPrice: `$${totalPrice.toFixed(2)}` } });
+    const selectedItems = [...mainMenuItems, ...juiceItems].filter(item => item.count > 0); // Filter selected items with count greater than 0
+    const totalPrice = selectedItems.reduce((total, item) => total + (parseFloat(item.price.slice(1)) * item.count), 0); // Calculate total price
+    navigate('/checkout', { state: { items: selectedItems, totalPrice: `$${totalPrice.toFixed(2)}` } });  // Navigate to checkout page with selected items and total price
   };
 
 
@@ -128,3 +132,4 @@ const Menus = ({ handleAddToCart }) => {
 };
 
 export default Menus;
+
