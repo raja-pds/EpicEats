@@ -23,7 +23,6 @@ import strabeery from '../assets/strabeery.jpg';
 const Menus = ({ handleAddToCart }) => {
   const [displayMenu, setDisplayMenu] = useState('mainMenuItems'); // State to toggle between main menu and juice menu
 
-
   // Define main menu items and juice items with their names, images, prices, and count
   const [mainMenuItems, setMainMenuItems] = useState([
     { name: 'Pizza', image: pizza, price: '$7.50', count: 0 },
@@ -46,11 +45,10 @@ const Menus = ({ handleAddToCart }) => {
     { name: 'Strawberry', image: strabeery, price: '$17.50', count: 0 },
     { name: 'Pineapple', image: pineapple, price: '$22.00', count: 0 }
   ]);
- 
+
   const navigate = useNavigate();  // Hook to navigate to different routes
 
-
-   // Function to toggle between main menu and juice menu
+  // Function to toggle between main menu and juice menu
   const toggleDisplayMenu = (menuType) => {
     setDisplayMenu(menuType);
   };
@@ -70,12 +68,28 @@ const Menus = ({ handleAddToCart }) => {
   };
 
   // Function to handle the "Buy Now" button click
-  const handleBuyNow = () => {
-    const selectedItems = [...mainMenuItems, ...juiceItems].filter(item => item.count > 0); // Filter selected items with count greater than 0
+  const handleBuyNow = (menuType, index) => {
+    let selectedItems;
+
+    if (menuType === 'mainMenuItems') {
+      const newMainMenuItems = [...mainMenuItems];
+      if (newMainMenuItems[index].count === 0) {
+        newMainMenuItems[index].count = 1;
+      }
+      selectedItems = newMainMenuItems.filter(item => item.count > 0);
+      setMainMenuItems(newMainMenuItems);
+    } else {
+      const newJuiceItems = [...juiceItems];
+      if (newJuiceItems[index].count === 0) {
+        newJuiceItems[index].count = 1;
+      }
+      selectedItems = newJuiceItems.filter(item => item.count > 0);
+      setJuiceItems(newJuiceItems);
+    }
+
     const totalPrice = selectedItems.reduce((total, item) => total + (parseFloat(item.price.slice(1)) * item.count), 0); // Calculate total price
     navigate('/checkout', { state: { items: selectedItems, totalPrice: `$${totalPrice.toFixed(2)}` } });  // Navigate to checkout page with selected items and total price
   };
-
 
   return (
     <div className='menubg w-100'>
@@ -97,7 +111,7 @@ const Menus = ({ handleAddToCart }) => {
                         <Button variant="primary" className='me-2'>{item.count}</Button>
                         <button style={{ backgroundColor: 'red', borderRadius: '5px', border: 'none' }} className='me-2'>{item.price}</button>
                         <Button variant='success' className='me-2' onClick={() => handleAddToCartAndNotify('mainMenuItems', index)}>Add to cart</Button>
-                        <button type='button' style={{ backgroundColor: 'orange', borderRadius: '5px', border: 'none' }} onClick={handleBuyNow}>Buy Now</button>
+                        <button type='button' style={{ backgroundColor: 'orange', borderRadius: '5px', border: 'none' }} onClick={() => handleBuyNow('mainMenuItems', index)}>Buy Now</button>
                       </div>
                     </Card.Body>
                   </Card>
@@ -117,7 +131,7 @@ const Menus = ({ handleAddToCart }) => {
                         <Button variant="primary" className='me-2'>{item.count}</Button>
                         <button style={{ backgroundColor: 'red', borderRadius: '5px', border: 'none' }} className='me-2'>{item.price}</button>
                         <Button variant='success' className='me-2' onClick={() => handleAddToCartAndNotify('juiceItems', index)}>Add to cart</Button>
-                        <button type='button' style={{ backgroundColor: 'orange', borderRadius: '5px', border: 'none' }} onClick={handleBuyNow}>Buy Now</button>
+                        <button type='button' style={{ backgroundColor: 'orange', borderRadius: '5px', border: 'none' }} onClick={() => handleBuyNow('juiceItems', index)}>Buy Now</button>
                       </div>
                     </Card.Body>
                   </Card>
@@ -132,4 +146,3 @@ const Menus = ({ handleAddToCart }) => {
 };
 
 export default Menus;
-
