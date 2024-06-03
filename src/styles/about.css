@@ -8,8 +8,37 @@
 }
 
 /* About section styling */
+.aboutimg {
+  position: relative;
+}
+
+.aboutimg img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.video-link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.video-icon {
+  font-size: 45px;
+  color: rgb(7, 7, 7);
+  background-color: yellow;
+  border-radius: 25px;
+}
+
 .aboutcontent h1 {
-  font-size: 68px;
+  font-size: 48px;
   font-family: serif;
   font-weight: 900;
   margin: 0;
@@ -20,6 +49,12 @@
   font-size: 17px;
   font-weight: 400;
   color: rgba(26, 47, 51, .7);
+}
+
+.icons {
+  margin-right: 10px;
+  font-size: 24px;
+  color: #333;
 }
 
 /* Center container margin adjustments */

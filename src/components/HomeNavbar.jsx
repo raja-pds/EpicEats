@@ -13,7 +13,7 @@ function HomeNavbar({ cartCount }) {
     <Navbar expand="lg" className="home-header" sticky='top'> {/* Navbar component */}
       <div className="container-fluid">
         <Navbar.Brand href="#home" className="me-auto"> {/* Brand logo */}
-          <img src={logo} alt='logo' width="150px" /> {/* Logo image */}
+          <img src={logo} alt='logo' width="100px" /> {/* Logo image */}
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" /> {/* Toggle button for mobile view */}
         <Navbar.Collapse id="basic-navbar-nav"> {/* Collapsible content */}
