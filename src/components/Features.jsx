@@ -16,9 +16,9 @@ const Features = () => {
         <Row>
           {/* Feature Card: Menu for every taste */}
           <Col lg={4} md={12} sm={12}>
-            <div className='receipe-card p-lg-5 p-md-3'>
+            <div className=' p-lg-5 p-md-3'>
               <img src={menu} alt='menu' className='feature-icon' />
-              <div className='p-lg-4 p-md-4 p-3'>
+              <div className=' featurecard p-lg-4 p-md-4 p-3'>
                 <h2>Menu for every taste</h2>
                 <p>Dolor sit amet, consectetur adipisicing elit et molestias possimus.</p>
               </div>
@@ -26,9 +26,9 @@ const Features = () => {
           </Col>
           {/* Feature Card: Fresh ingredients */}
           <Col lg={4} md={12} sm={12}>
-            <div className='receipe-card p-lg-5 p-md-3'>
+            <div className=' p-lg-5 p-md-3'>
               <img src={incrediants} alt='incrediants' className='feature-icon' />
-              <div className='p-lg-4 p-md-4 p-3'>
+              <div className=' featurecard p-lg-4 p-md-4 p-3'>
                 <h2>Fresh ingredients</h2>
                 <p>Assumenda possimus eaque illo iste, autem. Porro eveniet autem.</p>
               </div>
@@ -36,7 +36,7 @@ const Features = () => {
           </Col>
           {/* Feature Card: Experienced chefs */}
           <Col lg={4} md={12} sm={12}>
-            <div className='receipe-card p-lg-5 p-md-3'>
+            <div className=' featurecard p-lg-5 p-md-3'>
               <img src={cook} alt='cook' className='feature-icon' />
               <div className='p-lg-4 p-md-4 p-3'>
                 <h2>Experienced chefs</h2>

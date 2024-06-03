@@ -28,7 +28,7 @@ const About = () => {
           <FaFacebookF className='icons' />
           <FaInstagram className='icons' />
           <FaTwitter className='icons' />
-          <FaYoutube className='icons' />
+          <FaYoutube className='icons' />                 
         </div>
       </Col>
     </Row>
