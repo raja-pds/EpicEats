@@ -11,7 +11,7 @@ const ChefMaster = () => {
     <div className='chef-card'>
       <Row>
         {/* First Chef Card */}
-        <Col lg={4} md={12} sm={12}>
+        <Col lg={4} md={4} sm={12}>
           <div className='team-card w-100'>
             {/* Chef image */}
             <img src={c1} className='team-img w-100' alt='Chef Paul Trueman' />

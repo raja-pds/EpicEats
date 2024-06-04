@@ -35,6 +35,10 @@
   color: rgb(7, 7, 7);
   background-color: yellow;
   border-radius: 25px;
+  padding: 10px;
+  display: inline-block; /* Ensure the element can have padding and border-radius applied correctly */
+  box-shadow: 0 0 10px rgba(255, 255, 59, 0.5); /* Initial glow */
+  animation: glow 1.5s infinite alternate; /* Animation to pulse the glow */
 }
 
 .aboutcontent h1 {
@@ -44,6 +48,15 @@
   margin: 0;
   margin-bottom: 30px;
 }
+
+.read:hover{
+  width: 170px;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(140,186,19,1) 0%, rgba(0,212,255,1) 0%, rgba(255,196,0,1) 0%, rgba(255,12,0,1) 100%);
+  color: white;
+ 
+}
+
 
 .aboutcontent p {
   font-size: 17px;
@@ -71,6 +84,7 @@
   border: none;
   font-size: 15px;
   margin-top: 20px;
+  text-transform: uppercase;
 }
 
 
@@ -206,5 +220,13 @@
   .team-card{
     height: 680px;
     margin-bottom: 30px;
+  }
+}
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px rgba(255, 255, 0, 0.5), 0 0 20px rgba(255, 255, 0, 0.5);
+  }
+  to {
+    box-shadow: 0 0 20px rgba(255, 255, 0, 1), 0 0 30px rgba(255, 255, 0, 1);
   }
 }

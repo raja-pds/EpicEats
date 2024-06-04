@@ -106,13 +106,25 @@
 .find-us {
   text-align: center;
   height: 60px; 
-  width: 180px; 
+  width: 150px; 
   margin-top: 30px;
   font-size: 20px; 
   background-color: yellow;
   color: black;
   border: none;
   border-radius: 10px;
+  text-transform: uppercase;
+}
+
+
+.find-us:hover{
+  width: 190px;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(140,186,19,1) 0%, rgba(0,212,255,1) 0%, rgba(255,196,0,1) 0%, rgba(255,12,0,1) 100%);
+  color: white;
+
+  
+
 }
 
 /* small screen sizes */
