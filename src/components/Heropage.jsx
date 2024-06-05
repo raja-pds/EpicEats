@@ -5,6 +5,7 @@ import Carousel from 'react-bootstrap/Carousel'; // Importing the Carousel compo
 import bg1 from '../assets/bg1.jpg'; // Importing background images
 import bg2 from '../assets/bg2.jpg';
 import bg3 from '../assets/bg3.jpg';
+import bg4 from '../assets/bg4.jpg'
 
 function Heropage() {
   const navigate = useNavigate(); // Initializing the useNavigate hook
