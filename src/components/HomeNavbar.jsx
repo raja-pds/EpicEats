@@ -24,10 +24,9 @@ function HomeNavbar({ cartCount }) {
             <Nav.Link href="/contact">Contact</Nav.Link>
           </Nav>
           <div className="d-flex"> {/* Reservation button and shopping cart icon */}
-            <button className="reservation-button" onClick={() => navigate('\menu')} >Reservation</button> {/* Reservation button */}
+            <button className="reservation-button" onClick={() => navigate('/menu')} >Reservation</button> {/* Reservation button */}
             <div className='shop-icon-container ms-3'> {/* Container for shopping bag icon */}
               <MdOutlineShoppingBag className='shop-icon' /> {/* Shopping bag icon */}
-              {cartCount > 0 && <span className='cart-count'>{cartCount}</span>} {/* Cart count */}
             </div>
           </div>
         </Navbar.Collapse>

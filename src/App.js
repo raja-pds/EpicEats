@@ -20,7 +20,7 @@ function App() {
 
   return (
     <BrowserRouter>
-        <HomeNavbar cartCount={cartCount} />
+        <HomeNavbar  />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<><Heropage /><Example /><Footer /></>} />

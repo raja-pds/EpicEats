@@ -10,7 +10,7 @@ const CheckoutPage = () => {
   const { items, totalPrice } = location.state; // Destructure items and totalPrice from location state
 
   // Calculate total quantity of items
-  const totalQuantity = items.reduce((total, item) => total + item.count, 0);
+  const totalQuantity = items.reduce((total, item) => total + item.qty, 0);
 
   return (
     // Main container for the checkout page
@@ -37,8 +37,8 @@ const CheckoutPage = () => {
             <tr key={index}>
               <td>{item.name}</td>
               <td>{item.price}</td>
-              <td>{item.count}</td>
-              <td>{`$${(parseFloat(item.price.slice(1)) * item.count).toFixed(2)}`}</td>
+              <td>{item.qty}</td>
+              <td>{`₹${(parseFloat(item.price.replace("₹", "")) * item.qty).toFixed(2)}`}</td>
             </tr>
           ))}
         </tbody>
@@ -56,10 +56,10 @@ const CheckoutPage = () => {
               <Card.Body>
                 {/* Item name */}
                 <Card.Title>{item.name}</Card.Title>
-                {/* Price and count of the item */}
+                {/* Price and quantity of the item */}
                 <p>Price: {item.price}</p>
-                <p>Quantity: {item.count}</p>
-                <p>Subtotal: {`$${(parseFloat(item.price.slice(1)) * item.count).toFixed(2)}`}</p>
+                <p>Quantity: {item.qty}</p>
+                <p>Subtotal: {`₹${(parseFloat(item.price.replace("₹", "")) * item.qty).toFixed(2)}`}</p>
               </Card.Body>
             </Card>
           </Col>
