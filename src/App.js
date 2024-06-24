@@ -10,6 +10,7 @@ import Home from './Pages/Home';
 import CheckoutPage from './components/Checkout';
 
 import Contact from './components/Contact';
+import LoginSignup from './components/Login';
 
 function App() {
   const [cartCount, setCartCount] = useState(0);
@@ -20,8 +21,9 @@ function App() {
 
   return (
     <BrowserRouter>
-        <HomeNavbar  />
       <Routes>
+      <Route path="/" element={<LoginSignup />} />
+      <Route path="/" element={<HomeNavbar  />} />
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<><Heropage /><Example /><Footer /></>} />
         <Route path="/about" element={ <> <Example /><Footer/> </> } />
