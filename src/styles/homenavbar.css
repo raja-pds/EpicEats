@@ -18,7 +18,7 @@
 /* Header */
 .home-header {
   padding: -10px;
-  background-color: #bdbbbbe1;
+  background-color: #ffffffe1;  
 }
 
 /* Navigation */
@@ -127,7 +127,8 @@
   padding: 0 100px 0 0;
 }
 .img-content h1,h4,p{
-  font-size: 18px;
+  font-size: 15px;
+  line-height: 25px;
 }
 
 }

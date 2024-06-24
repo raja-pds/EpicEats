@@ -17,7 +17,7 @@ function Heropage() {
         {/* First carousel item */}
         <Carousel.Item interval={1000}>
           {/* Image for the carousel item */}
-          <img src={bg1} className='w-100 hero-image' alt="Background 1" />
+          <img src={bg3} className='w-100 hero-image' alt="Background 1" />
           {/* Carousel caption */}
           <Carousel.Caption>
             {/* Content inside the caption */}
@@ -32,7 +32,7 @@ function Heropage() {
         </Carousel.Item>
         {/* Second carousel item */}
         <Carousel.Item interval={500}>
-          <img src={bg2} className='w-100 hero-image' alt="Background 2" />
+          <img src={bg3} className='w-100 hero-image' alt="Background 2" />
           <Carousel.Caption>
             <div className='img-content'>
               <h4>Hello, New friend</h4>

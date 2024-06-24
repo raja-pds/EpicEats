@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Container, Row, Col, Card, Button, Dropdown, DropdownButton, Modal } from "react-bootstrap";
-import Confetti from "react-confetti";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/menu.css";
 import pizza from "../assets/pizza.jpg";
@@ -25,8 +24,7 @@ const Menus = () => {
   const [displayMenu, setDisplayMenu] = useState("mainMenuItems");
   const [showModal, setShowModal] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
-  const [confettiActive, setConfettiActive] = useState(false);
-  
+
   const [mainMenuItems, setMainMenuItems] = useState([
     { name: "Pizza", image: pizza, price: "₹749", qty: 1, description: "Delicious cheese pizza with a crispy crust." },
     { name: "Fish Fry", image: fishfry, price: "₹199", qty: 1, description: "Crispy fried fish served with tartar sauce." },
@@ -64,7 +62,7 @@ const Menus = () => {
       const newItems = [...juiceItems];
       newItems[index].qty = qty;
       setJuiceItems(newItems);
-      }
+    }
   };
 
   const handleBuyNow = (menuType, index) => {
@@ -77,13 +75,9 @@ const Menus = () => {
 
     const totalPrice = parseFloat(selectedItem.price.replace("₹", "")) * selectedItem.qty;
 
-    setConfettiActive(true);
-    setTimeout(() => {
-      setConfettiActive(false);
-      navigate("/checkout", {
-        state: { items: [selectedItem], totalPrice: `₹${totalPrice.toFixed(2)}` },
-      });
-    }, 3000);
+    navigate("/checkout", {
+      state: { items: [selectedItem], totalPrice: `₹${totalPrice.toFixed(2)}` },
+    });
   };
 
   const handleShowDescription = (item) => {
@@ -147,7 +141,6 @@ const Menus = () => {
   return (
     <div className="menubg w-100">
       <Container fluid>
-        {confettiActive && <Confetti />}
         <div className="menucenter">
           <div className="d-flex justify-content-between align-items-start">
             <h2 className="section-title" onClick={() => toggleDisplayMenu("mainMenuItems")}>
