@@ -1,67 +1,59 @@
-// src/components/LoginSignup.js
-import React, { useState } from "react";
-import "../styles/login.css";
+import React, { useState } from 'react';
+import axios from 'axios';
+import '../styles/login.css';
 
-const LoginSignup = () => {
-  const [isLogin, setIsLogin] = useState(true);
+function Login() {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
 
-  const toggleForm = () => {
-    setIsLogin(!isLogin);
-  };
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            const response = await axios.post('http://localhost/login.php', {
+                email,
+                password,
+            });
+            if (response.data.status === 'error') {
+                setError(response.data.message);
+            } else {
+                setError('');
+                // Handle successful login (e.g., redirect to another page)
+                console.log(response.data.message);
+            }
+        } catch (error) {
+            console.error(error);
+            setError('An error occurred. Please try again.');
+        }
+    };
 
-  const handleLoginSubmit = (e) => {
-    e.preventDefault();
-    // Handle login logic here
-  };
-
-  const handleSignupSubmit = (e) => {
-    e.preventDefault();
-    // Handle signup logic here
-  };
-
-  return (
-    <div className="login-signup-container">
-      <div className="form-container">
-        {isLogin ? (
-          <form onSubmit={handleLoginSubmit} className="login-form">
+    return (
+        <div className="container">
             <h2>Login</h2>
-            <div className="form-group">
-              <label htmlFor="loginEmail">Email:</label>
-              <input type="email" id="loginEmail" required />
-            </div>
-            <div className="form-group">
-              <label htmlFor="loginPassword">Password:</label>
-              <input type="password" id="loginPassword" required />
-            </div>
-            <button type="submit" className="btn">Login</button>
-            <p className="toggle-text">
-              Don't have an account? <span onClick={toggleForm}>Sign up</span>
-            </p>
-          </form>
-        ) : (
-          <form onSubmit={handleSignupSubmit} className="signup-form">
-            <h2>Sign Up</h2>
-            <div className="form-group">
-              <label htmlFor="signupEmail">Email:</label>
-              <input type="email" id="signupEmail" required />
-            </div>
-            <div className="form-group">
-              <label htmlFor="signupPassword">Password:</label>
-              <input type="password" id="signupPassword" required />
-            </div>
-            <div className="form-group">
-              <label htmlFor="signupConfirmPassword">Confirm Password:</label>
-              <input type="password" id="signupConfirmPassword" required />
-            </div>
-            <button type="submit" className="btn">Sign Up</button>
-            <p className="toggle-text">
-              Already have an account? <span onClick={toggleForm}>Login</span>
-            </p>
-          </form>
-        )}
-      </div>
-    </div>
-  );
-};
+            {error && <div className="error-message">{error}</div>}
+            <form onSubmit={handleSubmit}>
+                <div>
+                    <label>Email:</label>
+                    <input
+                        type="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                    />
+                </div>
+                <div>
+                    <label>Password:</label>
+                    <input
+                        type="password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        required
+                    />
+                </div>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    );
+}
 
-export default LoginSignup;
+export default Login;
