@@ -16,7 +16,7 @@ const Time = () => {
               <h4>ABOUT US</h4>
               <h1>Working hours</h1>
               <p>Rolorem, beatae dolorum, praesentium itaque et quam quaerat.</p>
-              <button className='reserve-btn' onClick={() => navigate('\menu')} >Reservation</button>
+              <button className='reserve-btn' onClick={() => navigate('/menu')} >Reservation</button>
               <span className='contact-us m-lg-4 m-md-4 d-inline-block '>Contact Us</span>
             </div>
           </div>

@@ -100,7 +100,7 @@
 .receipe-card {
   margin: 20px;
   text-align: center;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: serif;
   font-size: 18px;
   color: black;
   margin-bottom: 10px;
@@ -149,7 +149,18 @@
   font-size: 30px;
   margin-left: 10px;
 }
-
+.feature-content{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.reserve-btn{
+  text-transform: uppercase;
+}
+.card-content{
+  font-family: serif;
+}
+.card-content p{
+  font-size: 20px;
+}
 .team-img {
   height: 600px;
   border-radius: 5px;
@@ -191,7 +202,7 @@
 
 /* Card header styling */
 .card h1 {
-  font-family: sans-serif;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 /* Main content background styling */
